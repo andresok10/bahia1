@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql+psycopg2://postgres:123456@localhost:5432/test'
 #engine=create_engine('postgresql://ok:7qF6RmXo5vKNJ4QzWOQDD4NyPGigclw9@dpg-cpgajvmct0pc73dag83g-a:5432/db1_dhy6')
-app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://ok:b5Dko0Kgdnn3L7Oj6Qpl05Lz0rTopmSc@dpg-cphs6eq1hbls73b8isk0-a:5432/db1_oi4n"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://ok:b5Dko0Kgdnn3L7Oj6Qpl05Lz0rTopmSc@dpg-cphs6eq1hbls73b8isk0-a:5432/db1_oi4n"
 #app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:@localhost/bahia3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
