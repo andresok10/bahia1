@@ -5,7 +5,6 @@ from fun_inicio import app_blueprint as a
 from fun_categorias import app_blueprint as b
 from fun_productos import app_blueprint as c
 from fun_usuarios import app_blueprint as d
-
 app = Flask(__name__)
 app.secret_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql+psycopg2://postgres:123456@localhost:5432/test'

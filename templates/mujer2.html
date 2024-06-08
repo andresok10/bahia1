@@ -61,10 +61,10 @@
         .cat4{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
         .img-cat{width:70px;height:35px;border-radius:10px;margin:5px 20px;}
 
-        .cont_galeria{width: 100%;justify-content: center;display: flex;height:auto;flex-wrap: wrap;margin:10px 0px;}
+        .cont_galeria{width: 100%;justify-content: center;display: flex;height:auto;flex-wrap: wrap;margin:0px 0px;background-color: #0c4fb3;}
         .caja_galeria{margin:0px 10px;}
         .datos_producto{display: flex;text-align: center;gap:20px;justify-content: center;}
-        .img_galeria{width:360px; height: 200px;margin-top:15px;}
+        .img_galeria{width:350px; height:220px;margin-top:15px;}
 
         .contenedor1{display: flex;width:100%;text-align: center;}
             .cont_nav{width:78%;display: flex;margin: 5px 0px;justify-content: flex-end;}
@@ -96,7 +96,7 @@
             .parrafo_publicidad1 p{font-size:16px;}
             .cont_nav a{margin: 0px 4px;}
             .caja_galeria{margin: 0px 4px;}
-            .img_galeria{width:350px;}
+            .img_galeriaxxx{width:100%;}
             h3{display: none;}
         }
 
@@ -104,7 +104,7 @@
             .caja_galeria{margin: 0px 2px;}
             .contenedor3{display: block;}
             .cajita1{width:100%;margin: 0px 2px}
-            .img_galeria{width:235px;}
+            .img_galeria{width:250px;}
             h3{display: none;}
             .cont_nav a{margin:0px 2px;}
             .imgx{width:85px;}
@@ -141,7 +141,9 @@
                 <img class="img_nav" src="{{url_for('static',filename='iconos/perfil1.jpg')}}">
             </a>
 
-            <a href="/historial_pedidos">pedidos</a>
+            <a href="/historial_pedidos">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/pedido.jpg')}}">
+            </a>
 
             <a href="/cerrar">
                 <img class="img_nav" src="{{url_for('static',filename='iconos/cerrar1.png')}}">
@@ -162,23 +164,36 @@
             </a>
 
 
-            <a href="/historial_pedidos">pedidos</a>
+            <a href="/historial_pedidos">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/pedido.jpg')}}">
+            </a>
 
             <a href="/cerrar">
-                <img class="img3_nav" src="{{url_for('static',filename='iconos/cerrar1.png')}}">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/cerrar1.png')}}">
             </a>
 
             <a style="display: flex;" href="/carrito">
-                <img class="img3_nav" src="{{url_for('static',filename='iconos/carrito.png')}}">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/carrito.png')}}">
                 <p
                     style="background-color:rgb(0, 255, 0);border-radius:80px;color: rgb(0, 0, 0);height:25px;width:30px;text-align: center;font-size:25px;">
                     <b>{{session['contador']}}</b>
                 </p>
             </a>
             {% else %}
-            <a href="/">INICIO</a>
-            <a href="/login">Login</a>
-            <a href="/registro">Registro</a>
+            <a href="/login">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/login.png')}}" title="Login / Register">
+            </a>
+            <a href="/historial_pedidos">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/favorito.png')}}">
+            </a>
+
+            <a style="display: flex;" href="/carrito">
+                <img class="img_nav" src="{{url_for('static',filename='iconos/carrito.png')}}">
+                <p
+                    style="background-color:rgb(0, 255, 0);border-radius:80px;color: rgb(0, 0, 0);height:25px;width:30px;text-align: center;font-size:25px;">
+                    <b>{{session['contador']}}</b>
+                </p>
+            </a>
             {% endif %}
         </div>
     </div>
@@ -246,11 +261,10 @@
         </div>
         
     </div>
-    <br>
+
     <h3 style="text-align: center;">Categorias</h3>
     <div class="contenedor3">
         <div class="cajita1">
-            <h4>* Damas *</h4>
             <div class="cat1">
                 {% for x in sub1 %}
                 {% if x.id==1 %}
@@ -300,6 +314,7 @@
 
                 {% elif x.subcatid==4 %}
                 <img class="img_galeria" src="{{url_for('static',filename='img-ropa/mujer/accesorios/') }}{{x.img1}}">
+                
                 {% endif %}
             </a>
             <div style="display:block;align-self: center;margin:0px opx">
