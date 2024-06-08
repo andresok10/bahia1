@@ -4,6 +4,6 @@ stripe
 flask-sqlalchemy
 sqlalchemy
 reportlab
-#psycopg2
+psycopg2
 #mysqlclient
 #gunicorn
