@@ -158,11 +158,10 @@
             </a>
 
             {% elif session["admin"]==False %}
+            
             <a href="/perfil">
-                {{ session['nombre'] }}
-                <!--<img style="width:50px;height:30px;" src="{{url_for('static',filename='images/logos-iconos/perfil1.jpg')}}">-->
+                <img class="img_nav" src="{{url_for('static',filename='iconos/perfil1.jpg')}}">
             </a>
-
 
             <a href="/historial_pedidos">
                 <img class="img_nav" src="{{url_for('static',filename='iconos/pedido.jpg')}}">
@@ -288,7 +287,7 @@
                 {% if x.id==4 %}
                 <a href="/inicio_uno/{{x.id}}">
                     <img class="img-cat" src="{{url_for('static',filename='/img-ropa/mujer/logos_mujer/cartera3.jpg') }}">
-                    <p>faldas/jeans</p>
+                    <p>Accesorios</p>
                 </a>
                 {% endif %}
                 {% endfor %}
