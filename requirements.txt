@@ -5,5 +5,5 @@ flask-sqlalchemy
 sqlalchemy
 reportlab
 #psycopg2
-mysqlclient
+#mysqlclient
 #gunicorn
