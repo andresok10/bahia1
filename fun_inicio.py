@@ -18,7 +18,7 @@ cart = []
 @app_blueprint.route('/', methods=["get"])
 @app_blueprint.route('/inicio_uno', methods=["get"])
 @app_blueprint.route('/inicio_uno/<int:id>', methods=["get","post"])
-def inicio1(id=not None):
+def inicio1(id=1):
     if "id" not in session:
         session.clear()
     #if "cart" in session:
