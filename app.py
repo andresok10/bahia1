@@ -41,3 +41,12 @@ if __name__ == '__main__':
 #    {{ session['nombre'] }}
 #    <!--<img style="width:50px;height:30px;" src="{{url_for('static',filename='images/logos-iconos/perfil1.jpg')}}">-->
 #</a>
+
+#@media screen and (min-width:800px) {
+#            .titulo{font-size: 18px;justify-content: flex-end}
+#            .parrafo_publicidad1 p{font-size:16px;}
+#            .cont_nav a{margin: 0px 4px;}
+#            .caja_galeria{margin: 0px 4px;}
+#            .img_galeriaxxx{width:100%;}
+#            h3{display: none;}
+#        }

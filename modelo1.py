@@ -10,6 +10,7 @@ class cat(db.Model):
 class subcat(db.Model):
     id = Column(Integer, primary_key=True, autoincrement=True)
     nombre = Column(String(50), nullable=False)
+    #img1 = Column(String(50))
     catid = Column(Integer)
     rel1 = db.relationship('cat', backref='subcat')
 

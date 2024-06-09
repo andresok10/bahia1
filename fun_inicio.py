@@ -15,7 +15,7 @@ app_blueprint = Blueprint('fun_inicio', __name__)
 #art1 = articulos.query.filter_by(catid=id).all() if id else articulos.query.all()    
 
 cart = []
-@app_blueprint.route('/', methods=["get"])
+@app_blueprint.route('/', methods=["get","post"])
 @app_blueprint.route('/inicio_uno', methods=["get"])
 @app_blueprint.route('/inicio_uno/<int:id>', methods=["get","post"])
 def inicio1(id=1):
@@ -28,7 +28,11 @@ def inicio1(id=1):
     cat1 = cat.query.all()
     #sub1 = subcat.query.filter_by(catid=id).all()
     sub1 = subcat.query.all()
+    subx = subcat.query.filter_by(id=id).all()
     art1 = articulos.query.filter_by(subcatid=id).all()
+
+    #sub2 = subcat.query.all()
+    #subx = subcat.query.filter_by(catid=id).all()
     if request.method == 'POST':
         product_id = int(request.form['product'])
         cantidadx = int(request.form['cantidad'])
@@ -43,7 +47,7 @@ def inicio1(id=1):
             cart.append({'id': idx.id, 'img1': idx.img1, 'nombre': idx.nombre, 'precio': idx.precio, "stock": cantidadx})
         session['contador'] = len(cart)
         return redirect(url_for("fun_inicio.inicio1", id=id))
-    return render_template("mujer2.html", art1=art1, cat1=cat1, sub1=sub1, )
+    return render_template("mujer2.html", art1=art1, cat1=cat1, sub1=sub1, subx=subx )
 
 @app_blueprint.route('/inicio_dos', methods=["get"])
 @app_blueprint.route('/inicio_dos/<int:id>', methods=["get","post"])

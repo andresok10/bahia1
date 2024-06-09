@@ -14,41 +14,14 @@
         .bb{display: flex;color: #fff;margin-top: 5px;justify-content: center;text-align: center;background-color: #0c4fb3;width:100%;}
         .imgx{width:90px;height:150px;border-radius:30px;}
 
-        .miboton {
-            background-color: #4b97e7;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-
-            display: flex;
-            width: 120px;
-            height: 35px;
-            font-size: 12px;
-            justify-content: center;
-            align-items: center;align-self: center;
-        }
-
-        .miboton.clicked {
+        .boton1{display: flex;border: 0;width:100px;height:25px;border-radius:20px;justify-content: center;align-items: center;cursor: pointer;}
+        .boton1.clicked {
             background-color: #28a745;
             /* Cambiar a color verde cuando se hace clic */
         }
-
-        /*#############*/
-        #miBoton {
-            /*background-color: #007bff;*/
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #miBoton.clicked {
-            background-color: #28a745;
-            /* Cambiar a color verde cuando se hace clic */
-        }
+        /*###### boton id #######*/
+        #boton1 {background-color: #c7d8cb;}
+        #boton1.clicked {background-color: #28a745;}
 
         * {text-decoration: none;list-style: none;outline: none; margin:0px 0px;}
         body {padding: 0px 0px;margin: 0px 0px;}
@@ -61,10 +34,10 @@
         .cat4{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
         .img-cat{width:70px;height:35px;border-radius:10px;margin:5px 20px;}
 
-        .cont_galeria{width: 100%;justify-content: center;display: flex;height:auto;flex-wrap: wrap;margin:0px 0px;background-color: #0c4fb3;}
-        .caja_galeria{margin:0px 10px;}
+        .cont_galeria{width: 100%;justify-content: center;display: flex;height:auto;flex-wrap: wrap;background-color: #0c4fb3;}
+        .caja_galeria{margin:0px 10px;margin-bottom: 10px;}
         .datos_producto{display: flex;text-align: center;gap:20px;justify-content: center;}
-        .img_galeria{width:350px; height:220px;margin-top:15px;}
+        .img_galeria{width:350px; height:220px;margin-top:5px;}
 
         .contenedor1{display: flex;width:100%;text-align: center;}
             .cont_nav{width:78%;display: flex;margin: 5px 0px;justify-content: flex-end;}
@@ -82,38 +55,27 @@
             .slider .img_slider {width: 50%;text-align: center;}
             @keyframes slide {
                 0% {margin-left: 0;}
-                20% {margin-left: 0;}
+                20% {magin-left: 0;}
                 25% {margin-left: -100%;}
                 45% {margin-left: -100%;}
-                50% {margin-left: -200%;}
+                50% {margin-lefrt: -200%;}
                 70% {margin-left: -200%;}
                 75% {margin-left: -300%;}
                 100% {margin-left: -300%;}
             }
-        
-        @media screen and (min-width:800px) {
-            .titulo{font-size: 18px;justify-content: flex-end}
-            .parrafo_publicidad1 p{font-size:16px;}
-            .cont_nav a{margin: 0px 4px;}
-            .caja_galeria{margin: 0px 4px;}
-            .img_galeriaxxx{width:100%;}
-            h3{display: none;}
-        }
 
         @media screen and (max-width:800px) {
-            .caja_galeria{margin: 0px 2px;}
             .contenedor3{display: block;}
-            .cajita1{width:100%;margin: 0px 2px}
-            .img_galeria{width:250px;}
+            .cajita1{width:100%;margin: 0px 2px;}
+            .caja_galeria{margin:0px 2px;margin-bottom:5px;}
+            .img_galeria{width:250px;margin-top:10px;}
             h3{display: none;}
             .cont_nav a{margin:0px 2px;}
             .imgx{width:85px;}
             .a{display: flex;font-size: 20px;margin: 0px 30px;}
         }
-
     </style>
 </head>
-
 <body>
     <!--################################-->
     <div class="contenedor1">
@@ -266,6 +228,7 @@
         <div class="cajita1">
             <div class="cat1">
                 {% for x in sub1 %}
+
                 {% if x.id==1 %}
                 <a href="/inicio_uno/{{x.id}}">
                     <img class="img-cat" src="{{url_for('static',filename='/img-ropa/mujer/logos_mujer/blusa1.png') }}">
@@ -290,7 +253,9 @@
                     <p>Accesorios</p>
                 </a>
                 {% endif %}
-                {% endfor %}
+
+                {% endfor %}   
+                   
             </div>        
         </div>
         <!--###################################-->
@@ -314,6 +279,17 @@
                 {% elif x.subcatid==4 %}
                 <img class="img_galeria" src="{{url_for('static',filename='img-ropa/mujer/accesorios/') }}{{x.img1}}">
                 
+                {% elif x.subcatid==5 %}
+                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/camisas/')}}{{x.img1}}">
+        
+                {% elif x.subcatid==6 %}
+                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/pantalon/') }}{{x.img1}}">
+        
+                {% elif x.subcatid==7 %}
+                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/calzado/') }}{{x.img1}}">
+        
+                {% elif x.subcatid==8 %}
+                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/accesorios/') }}{{x.img1}}">    
                 {% endif %}
             </a>
             <div style="display:block;align-self: center;margin:0px opx">
@@ -331,23 +307,25 @@
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
                     <input type="hidden" name="product" value="{{ x.id }}">
                     <input style="width:30px;height:20px;" type="hidden" name="cantidad" value="1" min="1" max="9" />
-
-                    <div style="display: flex;justify-content: center;text-align: center;align-items: center;align-content: center;align-self: center;">
+                    <!-- background-color: rgb(40, 206, 170) -->
+                    <!--<div style="display: flex;justify-content: center;text-align: center;align-items: center;align-content: center;align-self: center;">
                         <img style="width:25px;height:20px;" src="{{url_for('static',filename='iconos/carrito.png')}}">
-                        <input style="border: 0;width:100px;height:25px;border-radius:20px;;background-color: rgb(40, 206, 170)" type="submit" value="Agregar">
-                    </div>
-                        
-                        <!--<button class="miboton" onclick="changeColor(this)">
-                            <img style="width:25px;height:20px;"
-                                src="{{url_for('static',filename='logos-iconos/carrito.png')}}">
-                            Agregar
-                        </button>-->
+                        <input style="border: 0;width:100px;height:25px;border-radius:20px;" type="submit" value="Agregar"> 
+                    </div>-->
 
+                    <div style="display: flex;justify-content: center;">
+                        <button class="boton1" type="submit" onclick="changeColor(this)">
+                            <img style="width:25px;height:20px;" src="{{url_for('static',filename='iconos/carrito.png')}}">
+                            Agregar
+                            <!--<p style="align-self: center;">Agregar</p>-->     <!-- onclick="changeColor(this)" -->    <!-- class="miboton" -->
+                        </button>
+                    </div>
                 </form>
+
                 {% else %}
                 <div style="display: flex;justify-content: center;">
                     <a href="/login">
-                        <button style="display:flex;width:120px;height:25px;font-size:12px;border: none;justify-content: center;align-items: center;;color:black;border-radius:20px;">
+                        <button class="boton1">
                             <img style="width:25px;height:20px;" src="{{url_for('static',filename='iconos/carrito.png')}}">
                                 Agregar
                         </button>
