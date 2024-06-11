@@ -1,6 +1,6 @@
 from werkzeug.utils import secure_filename
 from flask import Flask,request,redirect,render_template,url_for,session, Blueprint
-from modelo1 import articulos, subcat
+from modelo1 import db, articulos, subcat
 #app = Flask(__name__)
 app_blueprint = Blueprint('fun_productos', __name__)
 ########################################################### crud articulos #####################################################

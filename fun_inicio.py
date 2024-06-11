@@ -1,6 +1,6 @@
 #from werkzeug.utils import secure_filename
 from flask import Flask, request, redirect, render_template, url_for, session, Blueprint
-from modelo1 import cat, subcat, articulos, usuarios, Pedido,DetallePedido
+from modelo1 import db, cat, subcat, articulos, usuarios, Pedido,DetallePedido
 import stripe
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
