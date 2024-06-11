@@ -11,7 +11,10 @@
         .aa{display: flex;justify-content: center;background-color: #28a745;}
         .a{display: flex;font-size: 20px;margin: 0px 50px;}
 
-        .bb{display: flex;color: #fff;margin-top: 5px;justify-content: center;text-align: center;background-color: #0c4fb3;width:100%;}
+        * {text-decoration: none;list-style: none;outline: none; margin:0px 0px;}
+        body {padding: 0px 0px;margin: 0px 0px;}
+
+        .bb{display: flex;color: #635d5d;margin-top: 5px;justify-content: center;text-align: center;width:100%;}
         .imgx{width:90px;height:150px;border-radius:30px;}
 
         .boton1{display: flex;border: 0;width:100px;height:25px;border-radius:20px;justify-content: center;align-items: center;cursor: pointer;}
@@ -22,23 +25,7 @@
         /*###### boton id #######*/
         #boton1 {background-color: #c7d8cb;}
         #boton1.clicked {background-color: #28a745;}
-
-        * {text-decoration: none;list-style: none;outline: none; margin:0px 0px;}
-        body {padding: 0px 0px;margin: 0px 0px;}
-
-        .contenedor3{display: flex;width:100%;justify-content: center;text-align: center;margin:0px 0px;}
-        .cajita1{width:40%;margin: 0px 20px;}
-        .cat1{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
-        .cat2{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
-        .cat3{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
-        .cat4{display: flex;justify-content: center;border-radius:10px;background-color: rgb(192, 210, 226)}
-        .img-cat{width:70px;height:35px;border-radius:10px;margin:5px 20px;}
-
-        .cont_galeria{width: 100%;justify-content: center;display: flex;height:auto;flex-wrap: wrap;background-color: #0c4fb3;}
-        .caja_galeria{margin:0px 10px;margin-bottom: 10px;}
-        .datos_producto{display: flex;text-align: center;gap:20px;justify-content: center;}
-        .img_galeria{width:350px; height:220px;margin-top:5px;}
-
+/*##########################################################################*/
         .contenedor1{display: flex;width:100%;text-align: center;}
             .cont_nav{width:78%;display: flex;margin: 5px 0px;justify-content: flex-end;}
             .cont_nav a{margin:0px 10px;}
@@ -46,13 +33,34 @@
 
             .cont_logo{width:20%;font-size: 35px;margin-left: 20px;}
 
-        .cont2_publicidad1{display: flex;width:100%;justify-content: center;align-items: center;text-align: center;height:200px;}
-            .parrafo_publicidad1{width:50%;font-size: 20px;text-align: center;color: #0c4fb3;}
-            .parrafo_publicidad1 p{font-size:20px;}
-            .img_slider{width:360px; height: 200px;margin:0px 0px}
-            .slider {width: 70%;text-align: center;margin: 0px 0px;overflow: hidden;}
-            .slider ul {width: 400%; text-align: center;display: flex;animation: slide 15s infinite linear;}
-            .slider .img_slider {width: 50%;text-align: center;}
+        .cat{display: flex;width:100%;text-align: center;justify-content: center;}
+        .a{font-size: 20px;margin:0px 50px;}
+
+        .cont2_publicidad1{display: flex;width:100%;justify-content: center;text-align: center;}
+            .oferta1{display:block; width:25%;}
+                .ok1{height:60px;font-size: 14px;background-color: #9fdaac;}
+                .ok2{height:60px;background-color: #d4e5f0;}
+                .ok3{height:60px;background-color: #f7ddc9;}
+
+            .oferta100{display:none;width: 100%;}
+                .ok1xx{width:500px;height:60px;background-color: #9fdaac;}
+                .ok2xx{width:500px;height:60px;background-color: #d4e5f0;}
+                .ok3xx{width:500px;height:60px;background-color: #f7ddc9;}
+            
+            .oferta2{display:block; width:25%;}
+                .ofertas{text-align: center;display:block;background-color: #f7ddc9;}
+                .img_ofertas{width:100px;height:100px}
+
+        .cont3_publicidad1{display: flex;width:100%;}
+            .ofertax{display:flex;width:100%;justify-content: center;}
+                .ok1x{width:500px;height:60px;background-color: #9fdaac;}
+                .ok2x{width:500px;height:60px;background-color: #d4e5f0;}
+                .ok3x{width:500px;height:60px;background-color: #f7ddc9;}
+            
+            .slider {width:40%;text-align: center;overflow: hidden;margin-left:10px;margin-right:10px;}
+            .slider ul {width:400%; text-align: center;display: flex;animation: slide 15s infinite linear;}
+            .img_slider{width:360px; height:200px;margin:0px 0px}
+            .slider .img_slider {width:100%;text-align: center;}
             @keyframes slide {
                 0% {margin-left: 0;}
                 20% {magin-left: 0;}
@@ -64,15 +72,48 @@
                 100% {margin-left: -300%;}
             }
 
+            .cont_cat{display: flex;width:100%;justify-content: center;text-align: center;margin:0px 0px;}
+                .cajita1{width:100%;margin: 0px 10px}
+                .cat1{display: flex;justify-content: center;border-radius:10px;flex-wrap: wrap}
+                .img-cat{width:70px;height:35px;border-radius:10px;margin:5px 5px;}
+
+            .cont_galeria{display: flex;width: 100%;justify-content: center;height:auto;flex-wrap: wrap;}
+                .caja_galeria{margin:0px 10px;margin-bottom: 10px;}
+                .datos_producto{display: flex;text-align: center;gap:20px;justify-content: center;}
+                .img_galeria{width:350px; height:220px;margin-top:5px;}
+
         @media screen and (max-width:800px) {
-            .contenedor3{display: block;}
+            .cont_cat{display: block;}
             .cajita1{width:100%;margin: 0px 2px;}
             .caja_galeria{margin:0px 2px;margin-bottom:5px;}
             .img_galeria{width:250px;margin-top:10px;}
-            h3{display: none;}
+    
             .cont_nav a{margin:0px 2px;}
             .imgx{width:85px;}
             .a{display: flex;font-size: 20px;margin: 0px 30px;}
+            .img-cat{width:50px;height:30px;border-radius:10px;margin:5px 2px;}
+            .img_slider{width:300px; height:150px;margin:0px 0px}
+            .slider{width:100%;;margin-left:0px;margin-right:0px;}
+
+            .cont2_publicidad1{display:block;}
+            .oferta1{display: none;}
+
+            .oferta2{display: flex;width:100%;margin: 0px 0px;}
+            .ofertas{width: 100%;}
+
+            .ok1xxx{width:200px;height:50px;background-color: #c1ebcb;}
+            .ok2xxx{width:200px;height:50px;background-color: #aec2da;}
+            .ok3xxxx{width:200px;height:50px;background-color: #90ad60;}
+            .ofertax{display: block;}
+            .img_ofertas{width:81px;height:80px}
+            
+            .oferta100{display:flex;width:100%;background-color: #28a745;}
+            
+            .ok1xx{width:255px;height:50px;background-color: #c1ebcb;}
+            .ok2xx{width:255px;height:50px;background-color: #aec2da;}
+            .ok3xx{width:200px;height:50px;background-color: #90ad60;}
+                
+
         }
     </style>
 </head>
@@ -159,34 +200,6 @@
         </div>
     </div>
 
-    <div class="cont2_publicidad1">
-        <div class="parrafo_publicidad1">
-            <p class="parrafo_wa">hola a todos</p>
-            <p class="parrafo_wa">aqui encontraras lo mejor a menor precio</p>
-            <div style="display: flex;justify-content: center;align-items: center;">
-                <img style="width: 50px;height: 50px;"
-                    src="{{url_for('static',filename='iconos/wa.png')}}">
-                <p class="parrafo_wa">0961655965</p>
-            </div>
-
-        </div>
-
-        <div class="slider">
-            <ul>
-                <img class="img_slider" src="{{url_for('static',filename='iconos/slider1.png')}}">
-                <img class="img_slider" src="{{url_for('static',filename='/iconos/slider1.png')}}">
-                <!--<img src="{{url_for('static',filename='images/logogelatinas.jpg')}}">-->
-            </ul>
-        </div>
-    </div>
-
-    <!--<div class="promocion1">
-        <p>25% DE DESCUENTO</p>
-        <p>Coleccion De Verano</p>
-        <p>A Partir De $10</p>
-        <p>COMPRA AHORA</p>
-    </div>-->
-
     <!--############################################################################### categorias ###########################-->
     <div class="aa">
         <a class="a" href="/inicio_uno">Mujer</a>
@@ -194,37 +207,101 @@
         <a class="a" href="">Niña</a>
         <a class="a" href="">Niño</a>
     </div>
+    <!--#################################################################-->
+    <div class="cont2_publicidad1">
+        <div class="oferta1">
+            <a style="text-align: center;display:block;" href="">
+                <div class="ok1">
+                    <p><b>Compra 2 lleva 1 de Ellos</b></p>
+                    <p>Al 50% DE DCTO.</p>
+                    <p>Compra ahora</p>
+                </div>
+            </a>
+            <a style="text-align: center;display:block;" href="">
+                <div class="ok2">
+                    <p><b>Compra 2 lleva 1 de Ellos</b></p>
+                    <p>Al 50% DE DCTO.</p>
+                    <p>Compra ahora</p>
+                </div>
+            </a>
+            <a style="text-align: center;display:block;" href="">
+                <div class="ok3">
+                    <p><b>Compra 2 lleva 1 de Elloszz</b></p>
+                    <p>Al 50% DE DCTO.</p>
+                    <p>Compra ahora</p>
+                </div>
+            </a>
+        </div>
+    
+        <div class="slider">
+            <ul>
+                <img class="img_slider" src="{{url_for('static',filename='iconos/slider1.png')}}">
+                <img class="img_slider" src="{{url_for('static',filename='/iconos/slider1.png')}}">
+                <!--<img src="{{url_for('static',filename='images/logogelatinas.jpg')}}">-->
+            </ul>
+        </div>
+
+        <div class="oferta2">
+            <a class="ofertas" href="">
+                <h3>Super Ofertas</h3>
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/chaqueta7.jpg')}}">
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/vestido4.jpg')}}">
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/chaqueta7.jpg')}}">
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/vestido4.jpg')}}">
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/chaqueta7.jpg')}}">
+                <img class="img_ofertas" src="{{url_for('static',filename='subcat_mujer/vestido4.jpg')}}">
+            </a>
+        </div>
+    </div>
+
+    <div class="oferta100">
+            <a style="text-align: center;display:block;" href="">
+                <div class="ok1xx">
+                    <p><b>Compra 2 lleva 1 de Ellosxx</b></p>
+                    <p>Al 50% DE DCTO.</p>
+                    <p>Compra ahora</p>
+                </div>
+            </a>
+            <a style="text-align: center;display:block;" href="">
+                <div class="ok2xx">
+                    <p><b>Compra 2 lleva 1 de Ellos</b></p>
+                    <p>Al 50% DE DCTO.</p>
+                    <p>Compra ahora</p>
+                </div>
+            </a>
+    </div>
+
+    <!--############################################################################### categorias ###########################-->
     
     <div class="bb">
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/chaqueta7.jpg')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/chaqueta7.jpg')}}">
             <p>Vacaciones</p>
         </div>
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/vestido4.jpg')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/vestido4.jpg')}}">
             <p>De Diario</p>
         </div>
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/chaqueta6.webp')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/chaqueta6.webp')}}">
             <p>Trabajo</p>
         </div>
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/chaqueta7.jpg')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/chaqueta7.jpg')}}">
             <p>Vacaciones</p>
         </div>
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/vestido1.jpg')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/vestido1.jpg')}}">
             <p>Fiesta</p>
         </div>
         <div style="display:block;">
-            <img class="imgx" src="{{url_for('static',filename='img-ropa/mujer/logos_mujer/chaqueta6.webp')}}">
+            <img class="imgx" src="{{url_for('static',filename='subcat_mujer/chaqueta6.webp')}}">
             <p>Trabajo</p>
         </div>
-        
     </div>
 
-    <h3 style="text-align: center;">Categorias</h3>
-    <div class="contenedor3">
+
+    <div class="cont_cat">
         <div class="cajita1">
             <div class="cat1">
                 {% for x in sub1 %}
@@ -278,18 +355,6 @@
 
                 {% elif x.subcatid==4 %}
                 <img class="img_galeria" src="{{url_for('static',filename='img-ropa/mujer/accesorios/') }}{{x.img1}}">
-                
-                {% elif x.subcatid==5 %}
-                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/camisas/')}}{{x.img1}}">
-        
-                {% elif x.subcatid==6 %}
-                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/pantalon/') }}{{x.img1}}">
-        
-                {% elif x.subcatid==7 %}
-                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/calzado/') }}{{x.img1}}">
-        
-                {% elif x.subcatid==8 %}
-                <img class="img_galeria" src="{{url_for('static',filename='img-ropa/hombre/accesorios/') }}{{x.img1}}">    
                 {% endif %}
             </a>
             <div style="display:block;align-self: center;margin:0px opx">
